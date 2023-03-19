@@ -30,6 +30,7 @@ def intro():
         2. Open-Data-RDW-Gekentekende_voertuigen_brandstof
     
     Om vervolgens meer informatie over het project te lezen
+    
     **👈 Selecteer dan een keuze uit de balk hiernaast**.""")
 
 
