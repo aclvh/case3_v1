@@ -39,6 +39,7 @@ def intro():
 def OpenChargeMap():
     import streamlit as st
     import pandas as pd
+    import requests
     
     st.markdown(f'# {list(page_names_to_funcs.keys())[1]}')    
     
