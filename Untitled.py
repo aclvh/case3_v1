@@ -73,14 +73,17 @@ def OpenChargeMap():
         Laadpalen = pd.concat([Laadpalen, df5], axis=1)
         Laadpalen.head(3)"""
     
-    response = requests.get("https://api.openchargemap.io/v3/poi/?output=json&countrycode=NL&maxresults=100&compact=true&verbose=false&key=28e1b6b5-74e9-4a18-91f2-fde28f7b71e5")
-    responsejson = response.json()
-    Laadpalen = pd.json_normalize(responsejson)
-    df4 = pd.json_normalize(Laadpalen.Connections)
-    df5 = pd.json_normalize(df4[0])
-    df5.head()
-    Laadpalen = pd.concat([Laadpalen, df5], axis=1)
-    Laadpalen.head(3)
+#     response = requests.get("https://api.openchargemap.io/v3/poi/?output=json&countrycode=NL&maxresults=100&compact=true&verbose=false&key=28e1b6b5-74e9-4a18-91f2-fde28f7b71e5")
+#     responsejson = response.json()
+#     Laadpalen = pd.json_normalize(responsejson)
+#     df4 = pd.json_normalize(Laadpalen.Connections)
+#     df5 = pd.json_normalize(df4[0])
+#     df5.head()
+#     Laadpalen = pd.concat([Laadpalen, df5], axis=1)
+#     Laadpalen.head(3)
+
+    Laadpalen = pd.read_csv("Laadpalen.csv")
+    Laadpalen.head()
 
     st.code(code_API, language = 'python')
     st.write(Laadpalen.head(3))
