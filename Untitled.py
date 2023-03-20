@@ -179,8 +179,16 @@ def rdw_data():
         Vervolgens wordt het samengevoegde bestand omgezet naar een csv bestand, zodat werken met de dataset sneller
         gaat.""")
     
-    df = pd.read_csv('samengevoegd.csv')
+    df = pd.read_csv('df_fig1.csv')
     df.head()
+    
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(x = df_fig1['jaar'],
+                             y = df_fig1['cum aantal']))
+    #                          mode='lines',
+    #                          name='lines'))
+    
+    st.plotly_chart(fig)
     
     st.write(df.head())
 
