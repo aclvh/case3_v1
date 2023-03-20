@@ -180,8 +180,8 @@ def rdw_data():
         Vervolgens wordt het samengevoegde bestand omgezet naar een csv bestand, zodat werken met de dataset sneller
         gaat.""")
     
-    df = pd.read_csv('df_fig1.csv')
-    df.head()
+    df_fig1 = pd.read_csv('df_fig1.csv')
+    df_fig1.head()
     
     fig = go.Figure()
     fig.add_trace(go.Scatter(x = df_fig1['jaar'],
